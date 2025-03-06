@@ -10,7 +10,7 @@ for i in range(1,3):
         position = int(input("Input Point %s dimension %s value:\n" % (i,j)))
         points.update({"p"+ str(i) + str(j): position})
         if i == 2:
-            distance.update({str(j): abs(abs(points["p1" + str(j)])-abs(points["p2" + str(j)]))})
+            distance.update({str(j): abs(points["p1" + str(j)]-points["p2" + str(j)])})
 
 for i in range(1,(dimensions+1)):
     dist = dist + (distance[str(i)] * distance[str(i)])
